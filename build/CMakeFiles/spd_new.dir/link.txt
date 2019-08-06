@@ -1,0 +1,1 @@
+/usr/bin/c++  -g   CMakeFiles/spd_new.dir/main.cpp.o  -o spd_new  -L/tmp/tmp.mQKeV34i4i/spdlog -Wl,-rpath,/tmp/tmp.mQKeV34i4i/spdlog -lspdlog -lpthread 

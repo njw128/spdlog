@@ -1,0 +1,55 @@
+Determining if the pthread_create exist failed with the following output:
+Change Dir: /tmp/tmp.mQKeV34i4i/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_e936e/fast"
+/usr/bin/make -f CMakeFiles/cmTC_e936e.dir/build.make CMakeFiles/cmTC_e936e.dir/build
+make[1]: 进入目录“/tmp/tmp.mQKeV34i4i/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_e936e.dir/CheckSymbolExists.c.o
+/usr/bin/cc    -o CMakeFiles/cmTC_e936e.dir/CheckSymbolExists.c.o   -c /tmp/tmp.mQKeV34i4i/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c
+Linking C executable cmTC_e936e
+/usr/cmake3.12/bin/cmake -E cmake_link_script CMakeFiles/cmTC_e936e.dir/link.txt --verbose=1
+/usr/bin/cc      CMakeFiles/cmTC_e936e.dir/CheckSymbolExists.c.o  -o cmTC_e936e 
+CMakeFiles/cmTC_e936e.dir/CheckSymbolExists.c.o：在函数‘main’中：
+CheckSymbolExists.c:(.text+0x1b)：对‘pthread_create’未定义的引用
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_e936e.dir/build.make:86: recipe for target 'cmTC_e936e' failed
+make[1]: *** [cmTC_e936e] Error 1
+make[1]: 离开目录“/tmp/tmp.mQKeV34i4i/build/CMakeFiles/CMakeTmp”
+Makefile:121: recipe for target 'cmTC_e936e/fast' failed
+make: *** [cmTC_e936e/fast] Error 2
+
+File /tmp/tmp.mQKeV34i4i/build/CMakeFiles/CMakeTmp/CheckSymbolExists.c:
+/* */
+#include <pthread.h>
+
+int main(int argc, char** argv)
+{
+  (void)argv;
+#ifndef pthread_create
+  return ((int*)(&pthread_create))[argc];
+#else
+  (void)argc;
+  return 0;
+#endif
+}
+
+Determining if the function pthread_create exists in the pthreads failed with the following output:
+Change Dir: /tmp/tmp.mQKeV34i4i/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTC_6dcb1/fast"
+/usr/bin/make -f CMakeFiles/cmTC_6dcb1.dir/build.make CMakeFiles/cmTC_6dcb1.dir/build
+make[1]: 进入目录“/tmp/tmp.mQKeV34i4i/build/CMakeFiles/CMakeTmp”
+Building C object CMakeFiles/cmTC_6dcb1.dir/CheckFunctionExists.c.o
+/usr/bin/cc   -DCHECK_FUNCTION_EXISTS=pthread_create   -o CMakeFiles/cmTC_6dcb1.dir/CheckFunctionExists.c.o   -c /usr/cmake3.12/share/cmake-3.12/Modules/CheckFunctionExists.c
+Linking C executable cmTC_6dcb1
+/usr/cmake3.12/bin/cmake -E cmake_link_script CMakeFiles/cmTC_6dcb1.dir/link.txt --verbose=1
+/usr/bin/cc  -DCHECK_FUNCTION_EXISTS=pthread_create    CMakeFiles/cmTC_6dcb1.dir/CheckFunctionExists.c.o  -o cmTC_6dcb1 -lpthreads 
+/usr/bin/ld: 找不到 -lpthreads
+collect2: error: ld returned 1 exit status
+CMakeFiles/cmTC_6dcb1.dir/build.make:86: recipe for target 'cmTC_6dcb1' failed
+make[1]: *** [cmTC_6dcb1] Error 1
+make[1]: 离开目录“/tmp/tmp.mQKeV34i4i/build/CMakeFiles/CMakeTmp”
+Makefile:121: recipe for target 'cmTC_6dcb1/fast' failed
+make: *** [cmTC_6dcb1/fast] Error 2
+
+
